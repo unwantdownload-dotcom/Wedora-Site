@@ -53,8 +53,6 @@ export const generateInvoicePDF = (order, customer, items = [], payments = [], s
 
   const businessName = settings?.business_name || 'WEDORA CHOCOLATES';
   const tagline = settings?.tagline || 'Artisanal Luxury Handcrafted Chocolates';
-  const businessPhone = settings?.phone || '+94 78 359 0222';
-  const businessAddress = settings?.address || 'No. 45, Flower Road, Colombo 07, Sri Lanka';
 
   const isAdvanceInvoice = Boolean(options?.isAdvanceInvoice || options?.advanceAmount);
   const totalAmount = Number(order.total_amount) || 0;
@@ -97,10 +95,6 @@ export const generateInvoicePDF = (order, customer, items = [], payments = [], s
   doc.setFontSize(8.5);
   doc.setTextColor(212, 175, 55);
   doc.text('FINE ARTISANAL CHOCOLATE', 63, 25);
-
-  doc.setFontSize(7.5);
-  doc.setTextColor(180, 195, 215);
-  doc.text(`${businessPhone}`, 63, 31);
 
   // Invoice Title & Meta (Right Aligned)
   doc.setTextColor(255, 255, 255);
@@ -300,7 +294,7 @@ export const generateInvoicePDF = (order, customer, items = [], payments = [], s
     doc.text(`Bank Transfer: ${options.bankDetails}`, 15, pageHeight - 21);
   }
 
-  // 6. Footer Line & Business Contact
+  // 6. Footer Line & Business Name
   const pageHeight = doc.internal.pageSize.height;
   doc.setDrawColor(212, 175, 55);
   doc.setLineWidth(0.6);
@@ -309,8 +303,7 @@ export const generateInvoicePDF = (order, customer, items = [], payments = [], s
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(7.5);
   doc.setTextColor(100, 116, 139);
-  doc.text(`${businessName} • ${businessAddress}`, 105, pageHeight - 12, { align: 'center' });
-  doc.text(`Phone: ${businessPhone}`, 105, pageHeight - 7, { align: 'center' });
+  doc.text(businessName, 105, pageHeight - 12, { align: 'center' });
 
   return doc;
 };
@@ -382,7 +375,7 @@ export const buildWhatsAppInvoiceMessage = (order, customer, settings, options =
     msg += `\n🏦 *Payment Details:*\n${options.bankDetails}\n`;
   }
 
-  msg += `\nThank you! 🌸\nContact: ${settings?.phone || '+94 78 359 0222'} | Web: www.wedora.lk`;
+  msg += `\nThank you! 🌸\nWeb: www.wedora.lk`;
 
   return msg;
 };
