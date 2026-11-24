@@ -21,7 +21,7 @@ export const formatNumber = (num) => {
 
 /**
  * Format Sri Lankan phone number for display
- * Example: +94771234567 -> +94 77 123 4567
+ * Example: +94783590222 -> +94 78 359 0222
  */
 export const formatPhoneNumber = (phone) => {
   if (!phone) return '-';

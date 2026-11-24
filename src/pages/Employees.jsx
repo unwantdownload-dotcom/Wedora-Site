@@ -230,7 +230,7 @@ export const Employees = () => {
             />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label">Role</label>
               <select className="form-select" value={role} onChange={(e) => setRole(e.target.value)}>

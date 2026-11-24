@@ -168,8 +168,8 @@ CREATE TABLE IF NOT EXISTS public.business_settings (
     id TEXT PRIMARY KEY DEFAULT 'default',
     business_name TEXT NOT NULL DEFAULT 'WEDORA Customized Chocolates',
     tagline TEXT DEFAULT 'Artisanal Luxury Handcrafted Chocolates',
-    phone TEXT DEFAULT '+94 77 123 4567',
-    whatsapp TEXT DEFAULT '+94 77 123 4567',
+    phone TEXT DEFAULT '+94 78 359 0222',
+    whatsapp TEXT DEFAULT '+94 78 359 0222',
     email TEXT DEFAULT 'orders@wedora.lk',
     address TEXT DEFAULT 'No. 45, Flower Road, Colombo 07, Sri Lanka',
     currency_code TEXT NOT NULL DEFAULT 'LKR',
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS public.business_settings (
 
 -- Seed default settings row
 INSERT INTO public.business_settings (id, business_name, tagline, phone, whatsapp, email, address, currency_code, currency_symbol)
-VALUES ('default', 'WEDORA Customized Chocolates', 'Artisanal Luxury Handcrafted Chocolates', '+94 77 123 4567', '+94 77 123 4567', 'orders@wedora.lk', 'No. 45, Flower Road, Colombo 07, Sri Lanka', 'LKR', 'Rs.')
+VALUES ('default', 'WEDORA Customized Chocolates', 'Artisanal Luxury Handcrafted Chocolates', '+94 78 359 0222', '+94 78 359 0222', 'orders@wedora.lk', 'No. 45, Flower Road, Colombo 07, Sri Lanka', 'LKR', 'Rs.')
 ON CONFLICT (id) DO NOTHING;
 
 -- ------------------------------------------------------------------------------

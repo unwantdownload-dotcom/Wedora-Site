@@ -83,7 +83,7 @@ export const Settings = () => {
   return (
     <div className="animate-fade-in">
       <form onSubmit={handleSave}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '1.5rem' }}>
           {/* Business Profile Settings */}
           <Card>
             <CardHeader
@@ -114,7 +114,7 @@ export const Settings = () => {
                 />
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+              <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                 <div className="form-group">
                   <label className="form-label">Business Phone</label>
                   <input
@@ -122,7 +122,7 @@ export const Settings = () => {
                     className="form-input"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="+94 77 123 4567"
+                    placeholder="+94 78 359 0222"
                   />
                 </div>
                 <div className="form-group">
@@ -132,7 +132,7 @@ export const Settings = () => {
                     className="form-input"
                     value={whatsapp}
                     onChange={(e) => setWhatsapp(e.target.value)}
-                    placeholder="+94 77 123 4567"
+                    placeholder="+94 78 359 0222"
                   />
                 </div>
               </div>
@@ -167,7 +167,7 @@ export const Settings = () => {
               subtitle="Numbering prefix and terms that appear on printed invoices"
             />
             <CardBody>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+              <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                 <div className="form-group">
                   <label className="form-label">Order Number Prefix</label>
                   <input

@@ -52,6 +52,7 @@ export const Topbar = ({ onMenuClick }) => {
       <div className="topbar-right">
         {/* Date Display */}
         <div
+          className="topbar-date"
           style={{
             display: 'flex',
             alignItems: 'center',

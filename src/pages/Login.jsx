@@ -38,6 +38,7 @@ export const Login = () => {
 
   return (
     <div
+      className="login-page"
       style={{
         minHeight: '100vh',
         backgroundColor: 'var(--navy-950)',
@@ -49,6 +50,7 @@ export const Login = () => {
       }}
     >
       <div
+        className="login-card"
         style={{
           width: '100%',
           maxWidth: '440px',

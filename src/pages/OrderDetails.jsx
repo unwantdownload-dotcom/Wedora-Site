@@ -677,23 +677,23 @@ export const OrderDetails = () => {
           </div>
 
           <div style={{ padding: '1.25rem 1.5rem', backgroundColor: 'var(--bg-hover)', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.4rem', alignItems: 'flex-end' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '260px', fontSize: '0.85rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '260px', fontSize: '0.85rem' }}>
               <span style={{ color: 'var(--text-muted)' }}>Items Subtotal:</span>
               <span style={{ fontWeight: 600 }}>{formatCurrency(order.subtotal)}</span>
             </div>
             {Number(order.additional_charges) > 0 && (
-              <div style={{ display: 'flex', justifyContent: 'space-between', width: '260px', fontSize: '0.85rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '260px', fontSize: '0.85rem' }}>
                 <span style={{ color: 'var(--text-muted)' }}>Delivery & Packing:</span>
                 <span style={{ fontWeight: 600 }}>+{formatCurrency(order.additional_charges)}</span>
               </div>
             )}
             {Number(order.discount) > 0 && (
-              <div style={{ display: 'flex', justifyContent: 'space-between', width: '260px', fontSize: '0.85rem', color: '#059669' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '260px', fontSize: '0.85rem', color: '#059669' }}>
                 <span>Discount:</span>
                 <span style={{ fontWeight: 600 }}>-{formatCurrency(order.discount)}</span>
               </div>
             )}
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '260px', fontSize: '1.1rem', fontWeight: 700, color: 'var(--navy-900)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.25rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: '260px', fontSize: '1.1rem', fontWeight: 700, color: 'var(--navy-900)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.25rem' }}>
               <span>Grand Total:</span>
               <span>{formatCurrency(order.total_amount)}</span>
             </div>
@@ -1330,7 +1330,7 @@ export const OrderDetails = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label required">Total Order Value (LKR)</label>
               <input
@@ -1364,7 +1364,7 @@ export const OrderDetails = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label">Discount (LKR)</label>
               <input
@@ -1509,7 +1509,7 @@ export const OrderDetails = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
             <div className="form-group" style={{ marginBottom: 0 }}>
               <label className="form-label" style={{ fontSize: '0.78rem' }}>Total Order Value</label>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--navy-900)', padding: '0.2rem 0' }}>
@@ -1651,7 +1651,7 @@ export const OrderDetails = () => {
             />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
             <div className="form-group" style={{ marginBottom: 0 }}>
               <label className="form-label required">Cost / Amount (LKR)</label>
               <input
@@ -1683,7 +1683,7 @@ export const OrderDetails = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
             <div className="form-group" style={{ marginBottom: 0 }}>
               <label className="form-label">Vendor / Supplier</label>
               <input

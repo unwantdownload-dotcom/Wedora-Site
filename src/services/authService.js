@@ -49,7 +49,7 @@ export const authService = {
         id: 'emp-001',
         full_name: 'Pramod',
         email: 'admin@wedora.lk',
-        phone: '+94 77 123 4567',
+        phone: '+94 78 359 0222',
         role: 'admin',
         status: 'active'
       };
@@ -60,7 +60,7 @@ export const authService = {
         id: 'emp-001',
         full_name: 'Pramod',
         email: 'admin@wedora.lk',
-        phone: '+94 77 123 4567',
+        phone: '+94 78 359 0222',
         role: 'admin',
         status: 'active'
       };
@@ -128,7 +128,7 @@ export const authService = {
       id: 'emp-001',
       full_name: 'Pramod',
       email: trimmedId.includes('@') ? trimmedId : ADMIN_CREDENTIALS.email,
-      phone: '+94 77 123 4567',
+      phone: '+94 78 359 0222',
       role: 'admin',
       status: 'active'
     };

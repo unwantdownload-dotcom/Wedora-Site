@@ -2,6 +2,8 @@
 .app-layout {
   display: flex;
   min-height: 100vh;
+  min-width: 0;
+  width: 100%;
   background-color: var(--bg-primary);
 }
 
@@ -171,12 +173,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   position: sticky;
   top: 0;
   z-index: 90;
 }
 
-.topbar-left { display: flex; align-items: center; gap: 1rem; }
+.topbar-left { display: flex; align-items: center; gap: 1rem; min-width: 0; }
 
 .mobile-menu-btn {
   display: none;
@@ -186,7 +189,7 @@
   background-color: var(--bg-hover);
 }
 
-.page-header-info { display: flex; flex-direction: column; }
+.page-header-info { display: flex; flex-direction: column; min-width: 0; }
 
 .page-title {
   font-size: 1.25rem;
@@ -199,9 +202,10 @@
   font-size: 0.78rem;
   color: var(--text-muted);
   font-weight: 400;
+  overflow-wrap: anywhere;
 }
 
-.topbar-right { display: flex; align-items: center; gap: 0.85rem; }
+.topbar-right { display: flex; align-items: center; gap: 0.85rem; flex-shrink: 0; }
 
 .mode-badge {
   display: inline-flex; align-items: center; gap: 0.4rem;
@@ -226,6 +230,7 @@
   padding: 1.75rem 2rem;
   max-width: 1400px;
   width: 100%;
+  min-width: 0;
   margin: 0 auto;
 }
 
@@ -253,6 +258,15 @@
   }
   .page-title {
     font-size: 1.15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar-date {
+    display: none !important;
   }
 }
 
@@ -265,5 +279,19 @@
   }
   .topbar-right .mode-badge {
     display: none;
+  }
+
+  .topbar-date,
+  .page-subtitle {
+    display: none;
+  }
+
+  .login-page {
+    padding: 0.75rem !important;
+  }
+
+  .login-card {
+    padding: 1.5rem 1.1rem !important;
+    border-radius: 16px !important;
   }
 }

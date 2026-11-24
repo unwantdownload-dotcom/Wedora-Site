@@ -158,14 +158,14 @@ export const NewOrder = () => {
                   </div>
                 )}
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+                <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                   <div className="form-group">
                     <label className="form-label">Customer Name *</label>
                     <input className="form-input" value={customerName} onChange={e => setCustomerName(e.target.value)} placeholder="e.g. Dilini Senanayake" required />
                   </div>
                   <div className="form-group">
                     <label className="form-label"><Phone size={13} color="#059669" style={{marginRight:4}} />WhatsApp Number *</label>
-                    <input className="form-input" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} placeholder="+94 77 123 4567" required />
+                    <input className="form-input" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} placeholder="e.g. +94 7X XXX XXXX" required />
                   </div>
                 </div>
                 <div className="form-group" style={{marginBottom:0}}>
@@ -181,7 +181,7 @@ export const NewOrder = () => {
                 <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--navy-900)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <Calendar size={16} color="var(--gold-500)" /> Order & Delivery Schedule
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+                <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
                   <div className="form-group">
                     <label className="form-label">Order Date</label>
                     <input type="date" className="form-input" value={orderDate} onChange={e => setOrderDate(e.target.value)} required />
@@ -217,7 +217,7 @@ export const NewOrder = () => {
                 <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--navy-900)', marginBottom: '0.85rem' }}>
                   🍫 Select Chocolate Type
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.65rem', marginBottom: '1.25rem' }}>
+                <div className="new-order-type-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.65rem', marginBottom: '1.25rem' }}>
                   {CHOCO_TYPES.map(spec => (
                     <button key={spec.code} type="button" onClick={() => selectType(spec)}
                       style={{
@@ -242,7 +242,7 @@ export const NewOrder = () => {
                   Order Items ({items.length})
                 </div>
                 {items.map((item, idx) => (
-                  <div key={item.id} style={{
+                  <div key={item.id} className="new-order-item-grid" style={{
                     display: 'grid', gridTemplateColumns: '1fr 80px 90px 100px 36px',
                     gap: '0.5rem', alignItems: 'end', padding: '0.75rem 0',
                     borderBottom: idx < items.length - 1 ? '1px solid var(--border-subtle)' : 'none'

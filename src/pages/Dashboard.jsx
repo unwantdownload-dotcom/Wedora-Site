@@ -210,7 +210,7 @@ export const Dashboard = () => {
         const thisMonthMargin = thisMonthSales > 0 ? ((thisMonthProfit / thisMonthSales) * 100).toFixed(1) : 0;
 
         return (
-          <div className="charts-grid" style={{ gridTemplateColumns: isAdmin ? '1.4fr 1fr' : '1fr' }}>
+          <div className={`charts-grid ${isAdmin ? '' : 'charts-grid-single'}`}>
             {/* Gross Profit Summary Card */}
             {isAdmin && (
             <Card>

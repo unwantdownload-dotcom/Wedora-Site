@@ -395,7 +395,7 @@ export const Products = () => {
         }
       >
         <form onSubmit={handleSaveProduct}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label">Order Code *</label>
               <input
@@ -420,7 +420,7 @@ export const Products = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label">Category</label>
               <select
@@ -444,7 +444,7 @@ export const Products = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label">Standard Price (LKR) *</label>
               <input

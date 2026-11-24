@@ -166,7 +166,7 @@ export const BackupRestore = () => {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '1.5rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '1.5rem' }}>
         {/* Export Section */}
         <Card>
           <CardHeader
@@ -306,7 +306,7 @@ export const BackupRestore = () => {
                   )}
 
                   <div style={{ fontWeight: 700, marginBottom: '0.5rem' }}>Records Preview:</div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.4rem' }}>
+                  <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.4rem' }}>
                     {Object.entries(importValidation.counts).map(([table, count]) => (
                       <div key={table} style={{ padding: '0.5rem 0.75rem', backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: 'var(--radius-md)' }}>
                         <span style={{ textTransform: 'capitalize' }}>{table}:</span> <strong>{count}</strong>

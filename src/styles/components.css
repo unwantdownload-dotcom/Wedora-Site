@@ -346,6 +346,8 @@
 .form-select,
 .form-textarea {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   padding: 0.6rem 0.85rem;
   background-color: var(--bg-hover);
   border: 1.5px solid transparent;
@@ -596,6 +598,34 @@
   .modal-footer .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .card-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .toast-container {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+
+  .toast {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px;
   }
 }
 

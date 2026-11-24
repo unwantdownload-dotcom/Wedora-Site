@@ -9,7 +9,7 @@ export const initialEmployees = [
     id: 'emp-001',
     full_name: 'Pramod (Admin)',
     email: 'admin@wedora.lk',
-    phone: '+94 77 123 4567',
+    phone: '+94 78 359 0222',
     role: 'admin',
     status: 'active',
     created_at: '2026-01-10T08:30:00Z'

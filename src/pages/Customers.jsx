@@ -355,7 +355,7 @@ export const Customers = () => {
             />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
+          <div className="mobile-stack-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem' }}>
             <div className="form-group">
               <label className="form-label">Phone Number *</label>
               <input
@@ -363,7 +363,7 @@ export const Customers = () => {
                 className="form-input"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="+94 77 123 4567"
+                placeholder="e.g. +94 7X XXX XXXX"
                 required
               />
             </div>
@@ -374,7 +374,7 @@ export const Customers = () => {
                 className="form-input"
                 value={whatsapp}
                 onChange={(e) => setWhatsapp(e.target.value)}
-                placeholder="+94 77 123 4567"
+                placeholder="e.g. +94 7X XXX XXXX"
               />
             </div>
           </div>
